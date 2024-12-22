@@ -13,8 +13,6 @@ connectDB("mongodb+srv://adityachopde27:BeOYGmPNsvo8r7ku@cluster0.fg9bt.mongodb.
     console.log("Database Connected...")
 })
 
-// BeOYGmPNsvo8r7ku
-
 app.get("/", async (req, res)=>{
     return res.json({message: "Hello TrackIt"})
 })
