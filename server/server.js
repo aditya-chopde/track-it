@@ -4,14 +4,15 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const { connectDB } = require("./connect")
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 const user = require("./routes/user")
+require("dotenv").config();
 
 app.use(cors())
 app.use(bodyParser.json())
 app.use(express.urlencoded({extended: false}))
 
-connectDB("mongodb+srv://adityachopde27:BeOYGmPNsvo8r7ku@cluster0.fg9bt.mongodb.net/track-it").then(()=>{
+connectDB(process.env.MONGO_URI).then(()=>{
     console.log("Database Connected...")
 })
 

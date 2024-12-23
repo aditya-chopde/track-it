@@ -1,5 +1,5 @@
 const User = require("../models/user")
-const JWT_SECRET = "aditya_dev@secret"
+const JWT_SECRET = process.env.JWT_SECRET
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 
